@@ -42,6 +42,13 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // instantiate a mutable character set
+        let characterSet = NSMutableCharacterSet()
+        // assign the needed character set
+        characterSet.formUnion(with: NSCharacterSet.decimalDigits)
+        // only need the decimal character added to the character set
+        characterSet.addCharacters(in: ".")
+        
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeparator = string.range(of: ".")
         
@@ -49,10 +56,15 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
             replacementTextHasDecimalSeparator != nil {
             return false
         }
+        else if string.rangeOfCharacter(from: characterSet.inverted) != nil {
+            return false
+        }
+        
         else {
             return true
         }
     }
+    
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         if let text = textField.text, let value = Double(text) {
