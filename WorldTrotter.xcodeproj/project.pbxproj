@@ -14,6 +14,7 @@
 		48599FF71E921A6D00D9BF97 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48599FF61E921A6D00D9BF97 /* WorldTrotterTests.swift */; };
 		4859A0021E921A6D00D9BF97 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859A0011E921A6D00D9BF97 /* WorldTrotterUITests.swift */; };
 		4859A0101E948C9E00D9BF97 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4859A00F1E948C9E00D9BF97 /* ConversionViewController.swift */; };
+		4859A0131E95ECDC00D9BF97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4859A0121E95ECDC00D9BF97 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4859A0011E921A6D00D9BF97 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		4859A0031E921A6D00D9BF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4859A00F1E948C9E00D9BF97 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
+		4859A0121E95ECDC00D9BF97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4859A0131E95ECDC00D9BF97 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				48599FF51E921A6D00D9BF97 /* WorldTrotterTests */,
 				4859A0001E921A6D00D9BF97 /* WorldTrotterUITests */,
 				48599FDF1E921A6D00D9BF97 /* Products */,
+				4859A0111E95ECDC00D9BF97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				4859A0031E921A6D00D9BF97 /* Info.plist */,
 			);
 			path = WorldTrotterUITests;
+			sourceTree = "<group>";
+		};
+		4859A0111E95ECDC00D9BF97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4859A0121E95ECDC00D9BF97 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +528,7 @@
 				4859A0081E921A6D00D9BF97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4859A0091E921A6D00D9BF97 /* Build configuration list for PBXNativeTarget "WorldTrotterTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				4859A00B1E921A6D00D9BF97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4859A00C1E921A6D00D9BF97 /* Build configuration list for PBXNativeTarget "WorldTrotterUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				4859A00E1E921A6D00D9BF97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
