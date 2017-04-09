@@ -14,7 +14,15 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("Conversion View Controller has loaded its view")
+        
         updateCelsiusLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.backgroundColor = getRandomColor()
     }
     
     var fahrenheitValue : Measurement<UnitTemperature>? {
@@ -86,5 +94,15 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
         return nf
     }()
     
+    
+    func getRandomColor() -> UIColor{
+        //Generate between 0 to 1
+        let red:CGFloat = CGFloat(drand48())
+        let green:CGFloat = CGFloat(drand48())
+        let blue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
+    }
+
     
 }
