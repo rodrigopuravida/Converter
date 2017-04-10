@@ -12,6 +12,7 @@ import MapKit
 class MapViewController: UIViewController {
     
     var mapView : MKMapView!
+   
     
     override func loadView() {
         //create a map view
@@ -19,7 +20,14 @@ class MapViewController: UIViewController {
         
         view = mapView;
         
-        let segmentedControl = UISegmentedControl(items: ["Standar", "Hybbrid", "Satellite"])
+        let button = UIButton(frame: CGRect(x: 15, y: 75, width: 100, height: 50))
+        button.backgroundColor = .green
+        button.setTitle("Zoom", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        
+        
+        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         
@@ -29,6 +37,8 @@ class MapViewController: UIViewController {
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(segmentedControl)
+        
+        self.view.addSubview(button)
         
         let topConstraint = segmentedControl.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
         
@@ -59,6 +69,10 @@ class MapViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        print("Map View Controller has loaded its view")
+        
+    }
+    
+    func buttonAction(sender: UIButton!) {
+        print("Button tapped")
     }
 }
